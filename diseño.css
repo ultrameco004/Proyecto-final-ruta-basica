@@ -26,3 +26,22 @@
   color: #fff;
   font-size: 16px;
 }
+
+body {
+  background-color: #272626f1;
+}
+
+.menu__opciones:hover {
+  color: rgb(218, 62, 23);
+  transition: 0.3s;
+}
+
+.Inicio p {
+  color: white;
+  font-size: 2rem;
+}
+
+.Inicio h2 {
+  color: white;
+  font-size: 3rem;
+}
