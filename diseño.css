@@ -103,3 +103,53 @@ table th {
   font-size: 2rem;
   color: white;
 }
+
+.noticias_productos p {
+  font-size: 1.2rem;
+  width: 65ch;
+  padding: 0;
+  margin: 0;
+}
+
+.noticias_productos td {
+  border: solid;
+}
+
+.noticias_productos th {
+  border: solid;
+  border-color: black;
+}
+
+.noticias_productos h3 {
+  color: white;
+  font-family: monospace;
+}
+
+.noticias_productos img {
+  border: 4px solid;
+  background-color: #fff;
+}
+
+#a1 {
+  background-color: rgb(231, 76, 60);
+  border-color: rgb(231, 76, 60);
+  border-radius: 1.2rem;
+}
+
+#a2 {
+  background-color: rgb(84, 153, 199);
+  border-color: rgb(84, 153, 199);
+  border-radius: 1.2rem;
+}
+
+#a3 {
+  background-color: rgb(231, 76, 60);
+  border-color: rgb(231, 76, 60);
+  border-radius: 1.2rem;
+}
+
+#a4 {
+  background-color: rgb(84, 153, 199);
+  border-color: rgb(84, 153, 199);
+  border-radius: 1.2rem;
+}
