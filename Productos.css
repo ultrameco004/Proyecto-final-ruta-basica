@@ -1,0 +1,54 @@
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+
+.seccion {
+  flex-basis: 23%;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+.seccion:hover {
+  transform: scale(1.1);
+}
+
+.seccion img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.seccion-info {
+  padding: 20px;
+}
+
+.seccion h2 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.seccion p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.seccion-precio {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
