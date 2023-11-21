@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>TechNova</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" href="Imagenes/ai.png" />
+  </head>
+  <body>
+    <form id="registroForm">
+      <h2>Registro de Usuario</h2>
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" id="correo" name="correo" required />
+
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" name="contrasena" required />
+
+      <label for="confirmar_contrasena">Confirmar Contraseña:</label>
+      <input
+        type="password"
+        id="confirmar_contrasena"
+        name="confirmar_contrasena"
+        required
+      />
+
+      <label for="genero">Género:</label>
+      <select id="genero" name="genero" required>
+        <option value="hombre">Hombre</option>
+        <option value="mujer">Mujer</option>
+      </select>
+
+      <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+      <input
+        type="date"
+        id="fecha_nacimiento"
+        name="fecha_nacimiento"
+        required
+      />
+
+      <button type="button" onclick="registrarUsuario()">Registrarse</button>
+    </form>
+    <script>
+      function registrarUsuario() {
+        var nombre = document.getElementById("nombre").value;
+        var correo = document.getElementById("correo").value;
+        var contrasena = document.getElementById("contrasena").value;
+        var confirmarContrasena = document.getElementById(
+          "confirmar_contrasena"
+        ).value;
+        var genero = document.getElementById("genero").value;
+        var fechaNacimiento = document.getElementById("fecha_nacimiento").value;
+
+        if (contrasena !== confirmarContrasena) {
+          alert("Las contraseñas no coinciden.");
+          return;
+        }
+
+        var usuario = {
+          nombre: nombre,
+          correo: correo,
+          contrasena: contrasena,
+          genero: genero,
+          fechaNacimiento: fechaNacimiento,
+        };
+
+        localStorage.setItem("usuario", JSON.stringify(usuario));
+
+        window.location.href = "login.html";
+      }
+    </script>
+  </body>
+</html>

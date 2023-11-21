@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TechNova</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" href="Imagenes/ai.png" />
   </head>
   <body>
     <div class="header">
@@ -23,7 +24,7 @@
           <li>
             <a class="menu__opciones" href="Productos.html">Productos</a>
           </li>
-          <li><a class="menu__opciones" href="#">Reseñas</a></li>
+          <li><a class="menu__opciones" href="reseñas.html">Reseñas</a></li>
           <li>
             <a class="menu__opciones" href="presentacion.html"
               >Acerca de nosotros</a
@@ -149,4 +150,31 @@
       /></a>
     </div>
   </footer>
+  <script>
+    window.onload = function () {
+      mostrarMenuUsuario();
+    };
+
+    function mostrarMenuUsuario() {
+      var usuarioInfo = document.getElementById("menuNavegacion");
+
+      var usuarioAlmacenado = localStorage.getItem("usuario");
+
+      if (usuarioAlmacenado) {
+        usuarioAlmacenado = JSON.parse(usuarioAlmacenado);
+
+        usuarioInfo.innerHTML = "<li>Hola, " + usuarioAlmacenado.nombre + " | ";
+        usuarioInfo.innerHTML +=
+          '<a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>';
+      } else {
+        window.location.href = "login.html";
+      }
+    }
+
+    function cerrarSesion() {
+      localStorage.removeItem("usuario");
+
+      window.location.href = "login.html";
+    }
+  </script>
 </html>

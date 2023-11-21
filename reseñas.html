@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechNova</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logito">
+        <h1>TechNova</h1>
+        <img
+          src="Imagenes/logoa-removebg-preview.png"
+          alt="TechNova__Logo"
+          width="60px"
+        />
+      </div>
+
+      <div class="menu">
+        <ul class="menu__items">
+          <li><a class="menu__opciones" href="Index.html">Inicio</a></li>
+          <li>
+            <a class="menu__opciones" href="Productos.html">Productos</a>
+          </li>
+          <li><a class="menu__opciones" href="reseñas.html">Reseñas</a></li>
+          <li>
+            <a class="menu__opciones" href="presentacion.html"
+              >Acerca de nosotros</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="reseñas">
+      <h2>Reseñas de Clientes</h2>
+
+      <div class="reseña">
+        <p class="nombre">Jason Stiven</p>
+        <p>
+          ¡Excelentes productos! Estoy muy satisfecho con mi computador.
+          Altamente recomendado.
+        </p>
+      </div>
+
+      <div class="reseña">
+        <p class="nombre">Tomás Ruiz</p>
+        <p>La rapidez con la que llegan es excepcional. ¡Calidad precio!</p>
+      </div>
+
+      <div class="reseña">
+        <p class="nombre">Jhon Eider</p>
+        <p>
+          ¡Este nuevo smartphone es increíble! La cámara de alta resolución
+          captura detalles impresionantes y la batería dura todo el día. Estoy
+          encantado con mi compra.
+        </p>
+      </div>
+
+      <div class="reseña">
+        <p class="nombre">María GadgetFan</p>
+        <p>
+          Compré estos auriculares inalámbricos y son lo mejor que he tenido. La
+          calidad del sonido es asombrosa y la duración de la batería me permite
+          escuchar música durante horas sin preocuparme por recargarlos.
+        </p>
+      </div>
+
+      <div id="formulario">
+        <h3>Agregar Comentario</h3>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required />
+
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" rows="4" required></textarea>
+
+        <button onclick="agregarComentario()">Agregar Comentario</button>
+      </div>
+    </div>
+
+    <script>
+      function agregarComentario() {
+        var nombre = document.getElementById("nombre").value;
+        var comentario = document.getElementById("comentario").value;
+
+        if (nombre && comentario) {
+          var nuevaReseña = document.createElement("div");
+          nuevaReseña.classList.add("reseña");
+
+          var nombreElemento = document.createElement("p");
+          nombreElemento.classList.add("nombre");
+          nombreElemento.textContent = nombre;
+
+          var comentarioElemento = document.createElement("p");
+          comentarioElemento.textContent = comentario;
+
+          nuevaReseña.appendChild(nombreElemento);
+          nuevaReseña.appendChild(comentarioElemento);
+
+          var contenedorReseñas = document.getElementById("reseñas");
+          contenedorReseñas.insertBefore(
+            nuevaReseña,
+            contenedorReseñas.firstChild
+          );
+
+          document.getElementById("nombre").value = "";
+          document.getElementById("comentario").value = "";
+        } else {
+          alert("Por favor, complete todos los campos.");
+        }
+      }
+    </script>
+  </body>
+</html>

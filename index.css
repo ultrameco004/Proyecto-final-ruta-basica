@@ -1,18 +1,18 @@
 @import url(Productos.css);
 @import url(presentacion.css);
-
-.banner {
-  background-image: url("Imagenes/dune_awakening_2023_video_game-wallpaper-3554x1999.jpg");
-  background-size: cover;
-  text-align: center;
-  color: #fff;
-  padding: 100px 0;
+@import url(registro.css);
+@import url(reseñas.css);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #272626f1;
 }
 
 .header {
   background-color: #333;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,13 +20,11 @@
 
 .logito {
   display: flex;
-  margin-left: 2rem;
+  margin: 1rem;
 }
 
 .logito h1 {
   font-size: 1.5rem;
-}
-.header h1 {
   color: #fff;
   margin: 0;
 }
@@ -34,22 +32,16 @@
 .menu {
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
-  margin-left: 11rem;
-}
-
-.menu {
-  background-color: #333;
-  text-align: center;
+  margin: 1rem;
 }
 
 .menu ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
 }
 
 .menu li {
-  display: inline;
   margin: 0 20px;
 }
 
@@ -59,8 +51,64 @@
   font-size: 16px;
 }
 
-body {
-  background-color: #272626f1;
+.banner {
+  background-image: url("Imagenes/dune_awakening_2023_video_game-wallpaper-3554x1999.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.Inicio h2 {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+}
+
+.Inicio p {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.noticias_productos {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.noticias_productos img {
+  margin-left: 2.5rem;
+}
+
+.noticias_productos th,
+.noticias_productos td {
+  padding: 15px;
+  text-align: left;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.titulo-logo,
+.info-empresa,
+.form-empresa,
+.redes-sociales {
+  flex: 1;
+  margin: 10px;
+}
+
+.redes-sociales img {
+  margin: 5px;
 }
 
 .menu__opciones:hover {
@@ -68,19 +116,45 @@ body {
   transition: 0.3s;
 }
 
-.Inicio p {
-  color: white;
-  font-size: 2rem;
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .logito {
+    margin-bottom: 1rem;
+  }
+
+  .menu {
+    margin: 1rem 0;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .Inicio p {
+    width: 100%;
+  }
+
+  .noticias_productos {
+    width: 100%;
+  }
 }
 
-.Inicio h2 {
-  color: white;
-  font-size: 3rem;
-}
-
-.Inicio p {
-  width: 50ch;
-  font-size: 2rem;
-  text-align: left;
-  margin-left: 3rem;
+@media screen and (max-width: 600px) {
+  .titulo-logo,
+  .info-empresa,
+  .form-empresa,
+  .redes-sociales {
+    width: 100%;
+  }
+  .banner {
+    background-position: top;
+  }
 }
